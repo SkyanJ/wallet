@@ -27,12 +27,21 @@ public class WalletServiceImpl implements WalletService{
     @Autowired
     private BillMapper billMapper;
 
+    /**
+     * 查询用户余额
+     * @param userid
+     * @return
+     */
     @Override
     public Wallet check(int userid) {
         Wallet wallet = walletMapper.selectById(userid);
         return wallet;
     }
 
+    /**
+     * 消费100元
+     * @param userid
+     */
     @Override
     public void consume(int userid) {
         walletMapper.consume(userid);
@@ -40,6 +49,11 @@ public class WalletServiceImpl implements WalletService{
         billMapper.insert(bill);
     }
 
+
+    /**
+     * 退款20元
+     * @param userid
+     */
     @Override
     public void refund(int userid) {
         walletMapper.refund(userid);

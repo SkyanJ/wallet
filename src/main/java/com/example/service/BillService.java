@@ -11,5 +11,10 @@ import java.util.List;
 */
 public interface BillService {
 
+    /**
+     * 查询金额明细
+     * @param userid
+     * @return
+     */
     List<Bill> detail(int userid);
 }

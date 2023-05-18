@@ -22,6 +22,11 @@ public class BillServiceImpl implements BillService{
     @Autowired
     private BillMapper billMapper;
 
+    /**
+     * 查询金额明细
+     * @param userid
+     * @return
+     */
     @Override
     public List<Bill> detail(int userid) {
 

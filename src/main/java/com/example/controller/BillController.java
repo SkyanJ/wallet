@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * 查询金额明细
+ */
 @RestController
 @RequestMapping("/api/bill")
 public class BillController {

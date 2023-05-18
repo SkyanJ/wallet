@@ -9,9 +9,22 @@ import com.example.model.Wallet;
 */
 public interface WalletService {
 
+    /**
+     * 查询用户余额
+     * @param userid
+     * @return
+     */
     Wallet check(int userid);
 
+    /**
+     * 消费100元
+     * @param userid
+     */
     void consume(int userid);
 
+    /**
+     * 退款20元
+     * @param userid
+     */
     void refund(int userid);
 }
